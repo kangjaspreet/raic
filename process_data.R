@@ -186,6 +186,11 @@ if (F) {
   
 }
 
+# Filter on RAIC =================================================
+
+data_final |> 
+  filter(raic == "aic", hispanic == "any")
+
 # Save data ======================================================
 
 write_csv(data_final, file = "data/processed/county-pop-age-raic-sex.csv")
